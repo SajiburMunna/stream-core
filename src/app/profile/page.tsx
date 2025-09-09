@@ -1,5 +1,12 @@
-import { PageHeader } from "@/components/PageHeader";
+import { Metadata } from "next";
+
+import { PageHeader } from "@/features/shared/components/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "StreamCore - Profile",
+  description: "StreamCore - Profile, Manage your account",
+};
 
 export default function ProfilePage() {
   return (

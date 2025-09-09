@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Search, Bell, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-export function Navbar() {
+function NavbarContent() {
   const pathname = usePathname();
   const router = useRouter();
   const params = useSearchParams();
@@ -111,5 +111,33 @@ export function Navbar() {
         </div>
       </div>
     </header>
+  );
+}
+
+export function Navbar() {
+  return (
+    <Suspense
+      fallback={
+        <header className="sticky top-0 z-20 border-b border-zinc-800 bg-zinc-950/50 backdrop-blur supports-[backdrop-filter]:bg-zinc-950/40">
+          <div className="mx-auto max-w-7xl px-4 md:px-6">
+            <div className="flex h-14 items-center justify-between gap-4">
+              <div className="flex items-center gap-2 md:hidden">
+                <div className="h-6 w-6 rounded-sm bg-zinc-800 animate-pulse" />
+              </div>
+              <div className="hidden md:flex items-center gap-2">
+                <div className="w-[280px] h-9 rounded-xl bg-zinc-800 animate-pulse" />
+              </div>
+              <div className="ml-auto flex items-center gap-2">
+                <div className="h-9 w-9 rounded-md bg-zinc-800 animate-pulse" />
+                <div className="h-9 w-9 rounded-md bg-zinc-800 animate-pulse" />
+                <div className="h-8 w-8 rounded-full bg-zinc-800 animate-pulse" />
+              </div>
+            </div>
+          </div>
+        </header>
+      }
+    >
+      <NavbarContent />
+    </Suspense>
   );
 }

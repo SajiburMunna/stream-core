@@ -1,4 +1,6 @@
-import { PageHeader } from "@/components/PageHeader";
+import { Metadata } from "next";
+
+import { PageHeader } from "@/features/shared/components/PageHeader";
 import {
   Card,
   CardContent,
@@ -6,6 +8,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "StreamCore - Recordings",
+  description: "StreamCore - Recordings, Manage and play your recorded content",
+};
 
 export default function RecordingsPage() {
   return (

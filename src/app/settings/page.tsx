@@ -1,6 +1,13 @@
-import { PageHeader } from "@/components/PageHeader";
+import { Metadata } from "next";
+
+import { PageHeader } from "@/features/shared/components/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+
+export const metadata: Metadata = {
+  title: "StreamCore - Settings",
+  description: "StreamCore - Settings, Configure StreamCore",
+};
 
 export default function SettingsPage() {
   return (
