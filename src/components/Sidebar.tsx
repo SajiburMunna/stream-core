@@ -21,7 +21,7 @@ export function Sidebar() {
   return (
     <aside className="hidden md:flex md:fixed md:inset-y-0 md:left-0 md:w-64 md:shrink-0 md:flex-col border-r border-zinc-800 bg-zinc-950/40 backdrop-blur-sm">
       <div className="px-4 py-4">
-        <Link href="/" className="flex items-center">
+        <Link href="/channels" className="flex items-center">
           <Image
             src="/streamcore-logo.png"
             alt="StreamCore"
