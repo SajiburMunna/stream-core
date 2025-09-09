@@ -79,7 +79,7 @@ function NavbarContent() {
             </div>
           </div>
           <div className="ml-auto flex items-center gap-2">
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               aria-label="Toggle theme"
@@ -94,11 +94,11 @@ function NavbarContent() {
               ) : (
                 <Moon className="h-5 w-5 text-zinc-400" />
               )}
-            </Button>
+            </Button> */}
             <Button variant="ghost" size="icon" aria-label="Notifications">
               <Bell className="h-5 w-5 text-zinc-400" />
             </Button>
-            <div className="h-8 w-8 overflow-hidden rounded-full border border-zinc-800">
+            {/* <div className="h-8 w-8 overflow-hidden rounded-full border border-zinc-800">
               <Image
                 src="/vercel.svg"
                 alt="avatar"
@@ -106,7 +106,7 @@ function NavbarContent() {
                 height={32}
                 className="object-cover invert"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -32,8 +32,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <div className="min-h-screen flex bg-[var(--background)] text-[var(--foreground)]">
